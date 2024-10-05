@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>G.W Alamin</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="img.png">
+  <script>
+        // Get the audio element
+        const bgAudio = document.getElementById('bg-audio');
+
+// Function to play audio when there's a user interaction
+function enableAudioPlayback() {
+  bgAudio.play().catch(error => {
+    console.log("Autoplay was blocked, waiting for user interaction to resume.");
+  });
+  
+  // Remove event listener after the first interaction
+  document.removeEventListener('click', enableAudioPlayback);
+  document.removeEventListener('keydown', enableAudioPlayback);
+}
+
+// Listen for any click or keypress to trigger the audio play
+document.addEventListener('click', enableAudioPlayback);
+document.addEventListener('keydown', enableAudioPlayback);
+  </script>
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="video.mp4" type="video/mp4" style="bottom: 0px;right: 0px;lef">
+  </video>
+
+  
+  <div class="avatar">
+    <header>
+      <img src="img.png" height="200px"width="200px">
+    </header>
+  </div>
+  <!-- Portfolio Content -->
+  <div class="portfolio-container">
+    <header>
+      <h1>G.W Alamin</h1>
+    </header>
+    
+    <section id="about">
+      <h2>Owner Of Gang War</h2>
+      <p>Gang War is a Community Server Based In Bangladesh.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Contact</h2>
+      <i class="fa-brands fa-discord" style=""></i>
+      <ul >
+        <li><a href="https://discord.gg/EV8sKuGDRd" style="color: white;text-shadow: 1px 1px 2px rgb(210, 239, 122), 0 0 25px rgb(229, 60, 60), 0 0 5px rgb(229, 126, 8);animation: fadeIn 2s ease-in-out;text-decoration: none;"target="_blank">DISCORD</a></li>
+        <li><a href="mailto:tsalamin00@gmail.com" style="color: white;text-shadow: 1px 1px 2px rgb(210, 239, 122), 0 0 25px rgb(229, 60, 60), 0 0 5px rgb(229, 126, 8);animation: fadeIn 2s ease-in-out;text-decoration: none;"target="_blank">MAIL</a></li>
+        <li><a href="https://www.facebook.com/ALAMIN.11373?mibextid=ZbWKwL" style="color: white;text-shadow: 1px 1px 2px rgb(210, 239, 122), 0 0 25px rgb(229, 60, 60), 0 0 5px rgb(229, 126, 8);animation: fadeIn 2s ease-in-out;text-decoration: none;"target="_blank">FACEBOOK</a></li>
+        <li><a href="https://youtube.com/@gangwar12-a?si=ShHA8foK0sbgyzp9" style="color: white;text-shadow: 1px 1px 2px rgb(210, 239, 122), 0 0 25px rgb(229, 60, 60), 0 0 5px rgb(229, 126, 8);animation: fadeIn 2s ease-in-out;text-decoration: none;"target="_blank">YOUTUBE</a></li>
+      </ul>
+
+    </section>
+
+    <footer>
+      
+      <p>&copy; 2024 My Portfolio | All Rights Reserved</p>
+    </footer>
+  </div>
+</body>
+</html>
